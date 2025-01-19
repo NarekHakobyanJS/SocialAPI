@@ -1,0 +1,12 @@
+header{
+    padding: 5px 10px 15px 10px;
+    background: black;
+    color : white;
+    margin-bottom: 20px;
+}
+
+nav > a {
+    color : cyan;
+    text-decoration: none;
+    margin: 10px;
+}
