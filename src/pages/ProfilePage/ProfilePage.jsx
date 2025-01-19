@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import { getProfileThunk, getPrfoileStatusThunk, changeStatusThunk, changeProfilePhotoThunk} from '../store/profileReducer'
-import Loading from '../components/Loading/Loading'
-import user from '../assets/user.png'
-import { FaPlus } from "react-icons/fa";
+import { getProfileThunk, getPrfoileStatusThunk, changeStatusThunk, changeProfilePhotoThunk} from '../../store/profileReducer'
+import Loading from '../../components/Loading/Loading'
+import user from '../../assets/user.png'
+import './ProfilePage.css'
+
 
 const ProfilePage = () => {
     const { profile, status, isFetching } = useSelector((state) => state.profilePage)

@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from 'react'
 import { Formik, Form, Field } from 'formik'
 import { useDispatch, useSelector } from 'react-redux'
 import {Navigate} from 'react-router-dom';
-import './pages.css'
-import { loginThunk } from '../store/authReducer'
+import './HomePage.css'
+import { loginThunk } from '../../store/authReducer'
 
 const HomePage = () => {
   const dispatch = useDispatch()

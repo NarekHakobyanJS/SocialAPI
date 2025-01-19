@@ -1,12 +1,12 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 
-import UserCard from '../components/UserCard/UserCard';
-import './pages.css'
-import { changePageAC } from '../store/usersReducer';
-import Loading from '../components/Loading/Loading';
+import UserCard from '../../components/UserCard/UserCard';
+import { changePageAC } from '../../store/usersReducer';
+import Loading from '../../components/Loading/Loading';
+import './UserPage.css'
 
-const UsersPage = () => {
+const UserPage = () => {
   const dispatch = useDispatch()
   const { users, totalCount, page, count, isFetching } = useSelector((state) => state.usersPage)
 
@@ -47,4 +47,4 @@ const UsersPage = () => {
   )
 }
 
-export default UsersPage
+export default UserPage
