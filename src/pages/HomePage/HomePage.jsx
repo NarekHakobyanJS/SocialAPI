@@ -1,23 +1,20 @@
 import React, { useEffect, useRef } from 'react'
 import {useSelector } from 'react-redux'
 import {Navigate} from 'react-router-dom';
+import { useAuth } from '../../hooks';
+
 import './HomePage.css'
-// import { loginThunk } from '../../store/authReducer'
 
 const HomePage = () => {
   
   const { userId } = useSelector((state) => state.auth)
   
-  useEffect(() => {
-    if(userId){
-      localStorage.setItem('userId', userId)
-    }
-  }, [userId])
 
-  if(localStorage.getItem('userId')){
+  let bool = useAuth(userId)
+  
+  if(bool){
     return <Navigate to={`/profile/${localStorage.getItem('userId')}`}/>
-  }
-
+}
 
   return (
     <>
